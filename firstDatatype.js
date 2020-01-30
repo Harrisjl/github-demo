@@ -56,9 +56,9 @@ console.log(2 + true);
 
 //Conditional homework
 var t = 2;
-t = t + 5;
+t = t + 5; // console is 7
 console.log(t);
-t *= 2;
+t *= 2; // console is 14
 console.log(t);
 t %= 3;
 console.log(t);
@@ -68,4 +68,10 @@ if (t < 10) {
   greeting = "Good day";
 } else {
   greeting = "Good evening";
+}
+console.log(t);
+
+var t;
+for (t = 0; t < 50; t++) {
+  console.log(t);
 }
