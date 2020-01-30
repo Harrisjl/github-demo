@@ -71,6 +71,11 @@ if (t < 10) {
 }
 console.log(t + greeting);
 
+var t;
+for (t = 0; t < 50; t++) {
+  console.log(t);
+}
+
 for (i = 0; i < 50; i++) {
   if (i % 2 == 0) {
     console.log(i);
