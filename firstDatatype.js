@@ -53,3 +53,19 @@ console.log(totalage);
 console.log(2 + true);
 
 // Bonus returned: 3
+
+//Conditional homework
+var t = 2;
+t = t + 5;
+console.log(t);
+t *= 2;
+console.log(t);
+t %= 3;
+console.log(t);
+if (t < 10) {
+  greeting = "Good morning";
+} else if (t < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
