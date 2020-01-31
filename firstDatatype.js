@@ -27,6 +27,7 @@
 //     } else if()
 
 //Declaring Variables
+
 var firstName;
 var lastName;
 
@@ -34,12 +35,14 @@ var num1 = 100;
 var selected = true;
 
 // Assigning values to variables
+
 firstName = "John";
 lastName = "Smith";
 
 var fullName = firstName + " " + lastName;
 
 //Output
+
 console.log(fullName);
 console.log(num1);
 console.log(selected);
@@ -55,6 +58,7 @@ console.log(2 + true);
 // Bonus returned: 3
 
 //Conditional homework
+
 var t = 2;
 t = t + 5; // console is 7
 console.log(t);
@@ -73,47 +77,100 @@ if (t < 10) {
 console.log(t + greeting);
 
 // Loop Work
-var t;
-for (t = 0; t < 50; t++) {
-  console.log(t);
+
+var hat = 1;
+
+/*for (hat; hat < 51; hat++) {
+  console.log(hat);
+}
+*/
+// While Loop Work
+
+var i = 1;
+
+while (i <= 50) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+  i++;
 }
 
-// While Loop Work
-for (i = 0; i < 50; i++) {
-  if (i % 2 == 0) {
-    console.log(i);
+var t = 0;
+
+for (t; t < 100; t++) {
+  if (t % 3 === 0 && t % 5 === 0) {
+    console.log(t + " fizz");
+  } else if (t % 3 === 0) {
+    console.log(t + " buzz");
+  } else if (t % 5 === 0) {
+    console.log(t + " fizzbuzz");
   }
 }
 
-// Logical Operator and If Statements
+// Function arguments 1-5
 
-var x = 55;
-var e = 50;
+function add(p, y) {
+  return p + y;
+}
+console.log(add(4, 7)); //11
 
-if (x < 55 && e > 50) {
-  console.log("true");
+function multiply(p, y) {
+  return p * y;
+}
+console.log(multiply(4, 7));
+
+function myFun(start, end) {
+  for (var o = start; o <= end; o++) {
+    console.log(o);
+  }
+}
+myFun(6, 8);
+
+var teamName = "Steelers";
+
+function myFunction(name) {
+  return teamName + name;
+}
+console.log(myFunction(1));
+
+var food = "food";
+
+(function(steak) {
+  console.log(steak);
+})(food);
+
+var str = "a amd 55.";
+var len = str.length;
+console.log(len);
+console.log(str[0]);
+console.log(str[1]);
+
+//for (var i = 0; i < str.length; i++) {}
+
+var str = "hello world";
+if (1 === 1) {
+  console.log(false);
+} else {
+  console.log("crazy");
 }
 
-var n = red;
-
-if (n == red);
-{
-  console.log("true");
+for (var i = 0; i < str.length; i++) {
+  console.log(str[i]);
 }
+var upperCase = str.toUpperCase();
+console.log(upperCase);
+console.log(upperCase.toLowerCase());
 
-var b = black;
+if (1 === 1) {
+  console.log(true);
+} else {
+  console.log("false");
 
-if (b !== black);
-{
-  console.log("black");
+  var str = "hello world";
+
+  if (str.includes("hello")) {
+    console.log("included");
+  } else {
+    console.log("excluded");
+  }
 }
-
-// Function
-
-function add(w, j) {
-  return w + j;
-}
-console.log(add(3, 4));
-console.log(add(-1, 1));
-
-console.log(add(1, 1, 1));
