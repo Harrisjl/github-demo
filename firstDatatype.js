@@ -61,6 +61,7 @@ console.log(t);
 t *= 2; // console is 14
 console.log(t);
 t %= 3;
+t %= 2;
 console.log(t);
 if (t < 10) {
   greeting = "Good morning";
@@ -71,13 +72,48 @@ if (t < 10) {
 }
 console.log(t + greeting);
 
+// Loop Work
 var t;
 for (t = 0; t < 50; t++) {
   console.log(t);
 }
 
+// While Loop Work
 for (i = 0; i < 50; i++) {
   if (i % 2 == 0) {
     console.log(i);
   }
 }
+
+// Logical Operator and If Statements
+
+var x = 55;
+var e = 50;
+
+if (x < 55 && e > 50) {
+  console.log("true");
+}
+
+var n = red;
+
+if (n == red);
+{
+  console.log("true");
+}
+
+var b = black;
+
+if (b !== black);
+{
+  console.log("black");
+}
+
+// Function
+
+function add(w, j) {
+  return w + j;
+}
+console.log(add(3, 4));
+console.log(add(-1, 1));
+
+console.log(add(1, 1, 1));
