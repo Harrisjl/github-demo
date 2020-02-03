@@ -174,3 +174,15 @@ if (1 === 1) {
     console.log("excluded");
   }
 }
+var rand = Math.floor(Math.random() * 11);
+
+function randomCheck() {
+  var x = document.getElementById("userInput").value;
+  if (x == rand) {
+    console.log("Success");
+  } else {
+    console.log("try again");
+    console.log(rand);
+    console.log(x);
+  }
+}
