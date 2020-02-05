@@ -72,22 +72,22 @@ var inventory = [
 
 let quanty = [50, 75, 70, 45, 65, 80, 35, 10, 15, 1];
 // used to show store inventory quantity
-let potatoes = 50
-let soap = 75
-let cheese = 70
-let milk = 45
-let cereal = 65
-let cookies = 80
-let bananas = 35
-let peanutbutter = 10
-let juice = 15
-let sugar = 1
+// let potatoes = 50
+// let soap = 75
+// let cheese = 70
+// let milk = 45
+// let cereal = 65
+// let cookies = 80
+// let bananas = 35
+// let peanutbutter = 10
+// let juice = 15
+// let sugar = 1
 // used to represent store quantity array
-let input = userinput
+// let input = userinput
 
   function add() {
     let input = document.getElementById('userinput').value;
-    let index = inventory.indexOf(input)
+    //let index = inventory.indexOf(input)
     if (inventory.includes(input) && quantity[index] > 0) {
       storeVolume.push(input);
       alert("Item Added to storeVolume.")
