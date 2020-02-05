@@ -1,3 +1,4 @@
+/*
 var goOutside;
 var weather = "bad";
 
@@ -71,3 +72,13 @@ if(!likeGames){
 } else {
     console.log("buy a pc");
 }
+*/
+// Required the built in 'assertion' Library
+
+var calcArea = require("../index.js");
+var assert = require("assert");
+// Create a test suite (group) called
+function findAreaTriangle(base, height) {
+  return 0.5 * base * height;
+}
+console.log(findAreaTriangle(4, 5));
