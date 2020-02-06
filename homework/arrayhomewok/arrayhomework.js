@@ -4,8 +4,8 @@ loop through a string at least 10 characters long and log each character
 make that string upper case
 
 */
-
-var myFruits = [
+/*
+var myFruits = 
   "Banana",
   "Orange",
   "Apple",
@@ -16,7 +16,8 @@ var myFruits = [
   "Lemon",
   "Prune",
   "Pear"
-];
+;
+/*
 var arrayLength = myFruits.length;
 for (i = 0; i < arrayLength; i++) {
   console.log(myFruits[i]);
@@ -55,22 +56,51 @@ fillArray();
 
 console.log(inventory);
 */
+//grocery cart
 
-var storeVolume = [];
-var inventory = [
-                'potatoes',
-                'soap',
-                'cheese',
-                'milk',
-                'cereal',
-                'cookies',
-                'bananas',
-                'peanut butter',
-                'juice',
-                'sugar'
+let storeVolume = [];
+let storeInventory = [
+  "potatoes",
+  "soap",
+  "cheese",
+  "milk",
+  "cereal",
+  "cookies",
+  "bananas",
+  "peanut butter",
+  "juice",
+  "sugar"
 ];
-
 let quanty = [50, 75, 70, 45, 65, 80, 35, 10, 15, 1];
+function add() {
+  let input = document.getElementById("userInput").value;
+  for (let i = 0; i < name.length; i++) {
+    if (input == inventory[i]) {
+      quanty[i]++;
+      console.log("{storeInventory[i]}: {quanty[i]}");
+    }
+  }
+}
+function sub() {
+  let input = document.getElementById("userInput").value;
+  let i = 0;
+  name.forEach(function(storeInventory) {
+    if (storeInventory == input) {
+      if (inventory[i] > 1) {
+        inventory[i]--;
+        console.log("{storeInventory}: {quanty[i]}");
+      } else if (inventory[i] == 0) {
+        console.log("{storeInventory} is out of stock!!!");
+        console.log("{storeInventory}: {quanty[i]}");
+      } else {
+        console.log("{storeInventory} is out of stock!!!");
+        inventory[i]--;
+        console.log("{storeInventory}: {quanty[i]}");
+      }
+    }
+    i++;
+  });
+}
 // used to show store inventory quantity
 // let potatoes = 50
 // let soap = 75
@@ -84,79 +114,76 @@ let quanty = [50, 75, 70, 45, 65, 80, 35, 10, 15, 1];
 // let sugar = 1
 // used to represent store quantity array
 // let input = userinput
+//   function add() {
+//     let input = document.getElementById('userinput').value;
+//     //let index = inventory.indexOf(input)
+//     if (inventory.includes(input) && quantity[index] > 0) {
+//       storeVolume.push(input);
+//       alert("Item Added to storeVolume.")
+//       let index = inventory.indexOf(input);
+//       if (storeVolume[index] >= 1) (
+//         storeVolume[index] -= 1;
+//     } else {
+//         prompt()
+//       }
+//     inventory.forEach(array => {
+//       if (input === array[0]) {
+//         array[1] += 1;
 
-  function add() {
-    let input = document.getElementById('userinput').value;
-    //let index = inventory.indexOf(input)
-    if (inventory.includes(input) && quantity[index] > 0) {
-      storeVolume.push(input);
-      alert("Item Added to storeVolume.")
-      let index = inventory.indexOf(input);
-      if (storeVolume[index] >= 1) (
-        storeVolume[index] -= 1;
-    } else {
-        prompt()
-      }
-    inventory.forEach(array => {
-      if (input === array[0]) {
-        array[1] += 1;
+// // Then create new foods.
+// var carrots = new FoodItem({
+//   name: "Carrots",
+//   amount: 50,
+//   decrease: 2
+// });
 
+// carrots.eat();
 
-// Then create new foods.
-var carrots = new FoodItem({
-  name: "Carrots",
-  amount: 50,
-  decrease: 2
-});
+// (function() {
+//   ("#cart-items").slideUp();
+//   (".cart").on("click", function() {
+//     ("#cart-items").slideToggle();
+//   });
 
-carrots.eat();
+//   ("#items-basket").text("(" + $("#list-item").children().length + ")");
 
-(function() {
-  ("#cart-items").slideUp();
-  (".cart").on("click", function() {
-    ("#cart-items").slideToggle();
-  });
+//   (".item").on("click", function() {
+//     ("#cart-items").slideDown();
+//     setTimeout(function() {
+//       ("#cart-items").slideUp();
+//     }, 2000);
+//     //add items to basket
+//     (this).each(function() {
+//       var name = $(this)
+//         .children(".item-detail")
+//         .children("h4")
+//         .text();
+//       var remove = "<button class='remove'> X </button>";
+//       var cena =
+//         "<span class='eachPrice'>" +
+//         parseFloat(
+//           (this)
+//             .children(".item-detail")
+//             .children(".prices")
+//             .children(".price")
+//             .text()
+//         ) +
+//         "</span>";
+//       ("#list-item").append(
+//         "<li>" + name + "&#09; - &#09;" + cena + "$" + remove + "</li>"
+//       );
 
-  ("#items-basket").text("(" + $("#list-item").children().length + ")");
+//       //number of items in basket
+//       ("#items-basket").text("(" + $("#list-item").children().length + ")");
+//       ("#items-basket").text();
 
-  (".item").on("click", function() {
-    ("#cart-items").slideDown();
-    setTimeout(function() {
-      ("#cart-items").slideUp();
-    }, 2000);
-    //add items to basket
-    (this).each(function() {
-      var name = $(this)
-        .children(".item-detail")
-        .children("h4")
-        .text();
-      var remove = "<button class='remove'> X </button>";
-      var cena =
-        "<span class='eachPrice'>" +
-        parseFloat(
-          (this)
-            .children(".item-detail")
-            .children(".prices")
-            .children(".price")
-            .text()
-        ) +
-        "</span>";
-      ("#list-item").append(
-        "<li>" + name + "&#09; - &#09;" + cena + "$" + remove + "</li>"
-      );
+//       //calculate total price
+//       var totalPrice = 0;
+//       (".eachPrice").each(function() {
+//         var cenaEach = parseFloat($(this).text());
+//         totalPrice += cenaEach;
+//       });
+//       ("#total-price").text(totalPrice + "$");
+//     });
 
-      //number of items in basket
-      ("#items-basket").text("(" + $("#list-item").children().length + ")");
-      ("#items-basket").text();
-
-      //calculate total price
-      var totalPrice = 0;
-      (".eachPrice").each(function() {
-        var cenaEach = parseFloat($(this).text());
-        totalPrice += cenaEach;
-      });
-      ("#total-price").text(totalPrice + "$");
-    });
-
-    //remove items from basket
-  
+//     //remove items from basket
