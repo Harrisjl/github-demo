@@ -9,11 +9,23 @@ span,
 applet,
 object,
 iframe,
-h1,
+h1 {
+  margin-bottom: 22px;
+}
+
 h2,
-h3,
-h4,
-h5,
+h3 {
+  margin-bottom: 22px;
+}
+
+h4 {
+  margin-bottom: 22px;
+}
+
+h5 {
+  margin-bottom: 22px;
+}
+
 h6,
 p {
   margin-bottom: 22px;
@@ -137,7 +149,21 @@ q:after {
   Grid
   ========================================
 */
+*
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 960px;
+}
 /*
+
   ========================================
   Clearfix
   ========================================
@@ -155,19 +181,8 @@ q:after {
   *zoom: 1;
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.container {
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 960px;
-}
+
+
 /*
   ========================================
   Typography
@@ -178,6 +193,22 @@ h1,
 h3,
 h4,
 h5,
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+*.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+*.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 30px;
+}
+
 
 /*
   ========================================
