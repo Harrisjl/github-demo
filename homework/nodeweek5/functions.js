@@ -22,4 +22,6 @@ function subtract(x, y) {
 
 module.exports = subtract;
 
-//subtract(10, 5);
+subtract(10, 5);
+
+
