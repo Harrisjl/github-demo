@@ -22,7 +22,12 @@ const prompt = require('prompt');
 
 prompt.start();
 
-prompt.get(['username', 'email'], function (err, result) {
+/**
+ * Awesome work here this is some slick code! The exercise did specify to pull this functionallity in 
+ * from 2 other files, however you've demonstrated you can do that in other places of you work so I'm 
+ * not sweating it however always remeber attention to detail on requirements. 
+ */
+prompt.get(['username', 'email'], function (err, result) { // <-- might consider using ES6 arrow functions
     if (err) { return onErr(err); }
     console.log('Command-line input received:');
     console.log('  Username: ' + result.username);
